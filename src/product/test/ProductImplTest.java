@@ -31,7 +31,7 @@ class ProductImplTest {
     }
 
     @Test
-    void addProduct() {
+    void addProductTest() {
         //null
         assertFalse(product.addProduct(null));
         // not add existing
@@ -45,13 +45,13 @@ class ProductImplTest {
     }
 
     @Test
-    void findProduct() {
+    void findProductTest() {
         // find product
         assertEquals(food[1], product.findProduct(102));
     }
 
     @Test
-    void removeProduct() {
+    void removeProductTest() {
         // remove product
         assertEquals(food[1], product.removeProduct(102));
         // not find remove product
@@ -59,13 +59,13 @@ class ProductImplTest {
     }
 
     @Test
-    void quantity() {
+    void quantityTest() {
         // size
         assertEquals(3, product.quantity());
     }
 
     @Test
-    void findProductsByExpDate() {
+    void findProductsByExpDateTest() {
         // find product by EXP
         Food[] expected = product.findProductsByExpDate("01.01.2024");
         Food[] actual = {food[0]};
