@@ -19,7 +19,7 @@ class ProductImplTest {
     void setUp() {
         product = new ProductImpl(4);
         food = new Food[3];
-        food[0] = new Food(101, "Tea", "01.01.2024", 1.99);
+        food[0] = new MilkFood(101, "Chesse", "01.01.2024", 10.99, "Goat");
         food[1] = new MeatFood(102, "Sausages", "01.12.2023", 8.99, "Beef");
         food[2] = new MilkFood(103, "Butter", "14.02.2024", 4.99, "Cow");
 
@@ -37,10 +37,10 @@ class ProductImplTest {
         // not add existing
         assertFalse(product.addProduct(food[1]));
         // add product
-        Food food1 = new Food(104, "Coffee", "25.01.2024", 4.99);
+        Food food1 = new MilkFood(105, "Milk", "25.01.2024", 0.99, "Cow");
         assertTrue(product.addProduct(food1));
         // cannot to exceeded capacity
-        Food food2 = new Food(105, "Apple", "25.11.2024", 0.99);
+        Food food2 = new MilkFood(106, "Milk", "25.01.2024", 0.99, "Cow");
         assertFalse(product.addProduct(food2));
     }
 

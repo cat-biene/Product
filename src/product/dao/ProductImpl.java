@@ -31,7 +31,6 @@ public class ProductImpl implements Product {
             if (foods[i].getBarCode() == barCode) {
                 return foods[i];
             }
-
         }
         return null;
     }

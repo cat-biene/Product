@@ -2,7 +2,7 @@ package product.model;
 
 import java.util.Objects;
 
-public class Food implements Comparable<Food> {
+public abstract class Food implements Comparable<Food> {
 
     // fields of class
     private int barCode;
